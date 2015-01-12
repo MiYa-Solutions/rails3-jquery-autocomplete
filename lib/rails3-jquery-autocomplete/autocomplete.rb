@@ -44,7 +44,7 @@ module Rails3JQueryAutocomplete
       def autocomplete(object, method, options = {})
         define_method("autocomplete_#{object}_#{method}") do
 
-          options[:where] = send("autocomplete_#{object}_#{method}_where") if respond_to? "autocomplete_#{object}_#{method}_where"
+          options[:where] = send("autocomplete_#{object}_#{method}_where") if self.methods.include?("autocomplete_#{object}_#{method}_where".to_sym)
           method = options[:column_name] if options.has_key?(:column_name)
 
           term = params[:term]

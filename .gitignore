@@ -24,3 +24,9 @@ tmp
 .rvmrc
 .gemrc
 Gemfile.lock
+
+# RubyMine idea files to ignore
+.idea/**
+.idea/*.*
+.idea.old/**
+.idea.old/*.*
